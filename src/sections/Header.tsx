@@ -1,13 +1,12 @@
-import React from 'react';
-
-const Header: React.FC = () => {
+export const Header = () => {
   return (
-    <header className="w-full">
+    <div>
       <nav>
-        <div>Header</div>
+        <a href="#">Home</a>
+        <a href="#">Projects</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
       </nav>
-    </header>
+    </div>
   );
 };
-
-export default Header;

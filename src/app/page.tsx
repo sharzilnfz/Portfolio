@@ -1,4 +1,6 @@
 import { Header } from '@/sections/Header';
+import { HeroSection } from '@/sections/Hero';
+
 // import { Footer } from '@/components/Footer';
 // import { Sidebar } from '@/components/Sidebar';
 // import { MainContent } from '@/components/MainContent';
@@ -20,8 +22,9 @@ import { Header } from '@/sections/Header';
 
 export default function Home() {
   return (
-    <div className="bg-black min-h-screen text-white">
+    <div>
       <Header />
+      <HeroSection />
     </div>
   );
 }

@@ -1,35 +1,100 @@
 import memojiImage from '@/assets/images/memoji-computer-s.png';
 import Image from 'next/image';
-// import ArrowDown from '@/assets/icons/arrow-down.svg';
-import { ArrowDown } from '@/assets/icons/arrow-down.svg';
+import ArrowDown from '@/assets/icons/arrow-down.svg';
+import grainImage from '@/assets/images/grain.jpg';
+import StarSvg from '@/assets/icons/star.jsx';
+import Sparkle from '@/assets/icons/Sparkle.jsx';
+
+import { HeroOrdit } from '@/components/HeroOrdit';
 
 export const HeroSection = () => {
   return (
-    <>
-      <div>
-        <div className="container">
-          <Image src={memojiImage} alt="Person" />
+    <div className="py-32 md:py-48 lg:py-60 relative z-0">
+      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
+        <div
+          className="absolute inset-0 -z-30 opacity-5"
+          style={{ backgroundImage: `url(${grainImage.src})` }}
+        ></div>
+        <div className="hero_ring"></div>
+        <div className="hero_ring size-[820px]"></div>
+        <div className="hero_ring size-[1020px]"></div>
+        <div className="hero_ring size-[1220px]"></div>
+
+        <HeroOrdit size={800} rotation={-72}>
+          <StarSvg className="size-28 text-emerald-300 first-line: animate-pulse" />
+        </HeroOrdit>
+        <HeroOrdit size={550} rotation={20}>
+          <StarSvg className="size-12 animate-pulse text-emerald-300 " />
+        </HeroOrdit>
+        <HeroOrdit size={590} rotation={98}>
+          <StarSvg className="size-8 animate-pulse text-emerald-300" />
+        </HeroOrdit>
+        <HeroOrdit size={440} rotation={79}>
+          <Sparkle className="size-8 animate-pulse text-emerald-300/20" />
+        </HeroOrdit>
+        <HeroOrdit size={430} rotation={-14}>
+          <Sparkle className="size-8 animate-pulse text-emerald-300/20" />
+        </HeroOrdit>
+        <HeroOrdit size={530} rotation={178}>
+          <Sparkle className="size-8 animate-pulse text-emerald-300/20" />
+        </HeroOrdit>
+        <HeroOrdit size={710} rotation={144}>
+          <Sparkle className="size-8 animate-pulse text-emerald-300/20" />
+        </HeroOrdit>
+
+        <HeroOrdit size={720} rotation={85}>
+          <div className="size-3 rounded-full bg-emerald-300/20" />
+        </HeroOrdit>
+        <HeroOrdit size={520} rotation={-41}>
+          <div className="size-2 rounded-full bg-emerald-300/20" />
+        </HeroOrdit>
+        <HeroOrdit size={650} rotation={-5}>
+          <div className="size-2 rounded-full bg-emerald-300/20" />
+        </HeroOrdit>
+      </div>
+
+      <div className="container mx-auto max-w-5xl px-4">
+        <div className="flex flex-col items-center">
+          <Image src={memojiImage} className="size-[100px]" alt="Person" />
+          <div className="bg-gray-950 border-gray-800 border-2 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg shadow-md">
+            <div className="bg-green-500 size-2.5 rounded-full animate-pulse"></div>
+            <div className="text-sm font-medium text-white-900">
+              Available for new projects
+            </div>
+          </div>
         </div>
-        <div></div>
-        <div>Available for new projects</div>
+
+        <div className="max-w-lg mx-auto">
+          {/* <h1 className="font-serif text-3xl md:text-5xl text-center font-bold mt-8 tracking-tight">
+            Building Exceptional User Experiences
+          </h1> */}
+          <h1 className="font-serif text-4xl md:text-6xl text-center font-bold mt-8 tracking-tight text-white bg-gradient-to-r from-emerald-400 via-green-300 to-emerald-400 bg-clip-text text-transparent drop-shadow-[0_2px_4px_rgba(0,255,128,0.35)]">
+            Building Exceptional User Experiences
+          </h1>
+
+          <p className="text-center text-white/60 mt-4 md:text-lg">
+            I specialize in transforming ideas into stunning digital
+            experiences. With a passion for design and building high-performance
+            web applications.
+          </p>
+        </div>
+
+        <div className="flex flex-col items-center gap-4 mt-8 md:flex-row justify-center">
+          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
+            <span className="relative z-10 font-semibold">Explore My Work</span>
+            <Image src={ArrowDown} alt="ArrowDown" className="invert" />
+          </button>
+          <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-xl">
+            <span className=""></span>
+            <span className="text-2xl animate-[wave_0.5s_ease-in-out_infinite]">
+              ✌️
+            </span>
+            <span className="relative z-10 font-semibold">Let's Connect</span>
+          </button>
+        </div>
       </div>
-      <h1>Building Exceptional User Experiences</h1>
-      <p>
-        I specialize in transforming ideas into stunning digital experiences.
-        With a passion for design and building high-performance web
-        applications.
-      </p>
-      <div>
-        <button>
-          <span>⬇</span>
-          <span>Explore my work</span>
-          {/* <ArrowDown /> */}
-        </button>
-        <button>
-          <span>👋</span>
-          <span>Let's connect</span>
-        </button>
-      </div>
-    </>
+    </div>
   );
 };
+export default HeroSection;
+// Compare this snippet from src/app/page.tsx:

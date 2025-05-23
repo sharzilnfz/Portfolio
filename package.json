@@ -12,7 +12,6 @@
   "dependencies": {
     "@eslint/config-array": "^0.20.0",
     "@eslint/object-schema": "^2.1.6",
-    "@svgr/webpack": "^8.1.0",
     "framer-motion": "^11.3.21",
     "glob": "^11.0.2",
     "lru-cache": "^11.1.0",
@@ -23,6 +22,7 @@
     "tailwind-merge": "^2.4.0"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

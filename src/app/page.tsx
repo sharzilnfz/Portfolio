@@ -1,5 +1,6 @@
 import { Header } from '@/sections/Header';
 import { HeroSection } from '@/sections/Hero';
+import { ProjectsSection } from '@/sections/Projects';
 
 // import { Footer } from '@/components/Footer';
 // import { Sidebar } from '@/components/Sidebar';
@@ -16,7 +17,7 @@ import { HeroSection } from '@/sections/Hero';
 // import { useEffect } from 'react';
 // import { usePathname } from 'next/navigation';
 // import { useRouter } from 'next/navigation';
-// import { useSession } from 'next-auth/react';
+// import { useSession } from 'next-a uth/react';
 // import { useTranslation } from 'react-i18next';
 // import { useTranslation as useTranslationNext } from 'next-i18next';
 
@@ -25,6 +26,7 @@ export default function Home() {
     <div>
       <Header />
       <HeroSection />
+      <ProjectsSection />
     </div>
   );
 }

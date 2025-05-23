@@ -1,25 +1,18 @@
-import PropTypes from 'prop-types';
-
-const CheckIcon = ({ className, style }) => (
+const CheckIcon = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className={className}
-    style={style}
+    strokeWidth={1.5}
+    className="size-6"
+    viewBox="0 0 24 24"
+    {...props}
   >
-    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+    />
   </svg>
 );
-
-CheckIcon.propTypes = {
-  className: PropTypes.string,
-  style: PropTypes.object,
-};
-
 export default CheckIcon;

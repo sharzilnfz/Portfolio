@@ -25,8 +25,23 @@ const config: Config = {
         sans: ['var(--font-sans)'],
         serif: ['var(--font-serif)'],
       },
+      animation: {
+        'ping-large': 'ping-large 1s ease-in-out infinite',
+        orbit: 'orbit var(--spin-duration, 20s) linear infinite',
+      },
+      keyframes: {
+        'ping-large': {
+          '0%': { transform: 'scale(1)', opacity: '1' },
+          '75%, 100%': { transform: 'scale(3)', opacity: '0' },
+        },
+        orbit: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+      },
     },
   },
   plugins: [],
 };
+
 export default config;

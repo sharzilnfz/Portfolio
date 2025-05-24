@@ -19,6 +19,7 @@
     "react": "^18",
     "react-dom": "^18",
     "rimraf": "^6.0.1",
+    "sharp": "^0.34.2",
     "tailwind-merge": "^2.4.0"
   },
   "devDependencies": {

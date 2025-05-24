@@ -48,7 +48,7 @@ const portfolioProjects = [
 export const ProjectsSection = () => {
   return (
     <section className="pb-16 lg:py-24">
-      <div className="container ">
+      <div className="container px-4">
         <div className="flex justify-center">
           <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text text-center">
             Real-World Results
@@ -61,7 +61,7 @@ export const ProjectsSection = () => {
           See how I transformed concepts into engaging digital experiences
         </p>
 
-        <div className="mt-10 md:mt-20 flex flex-col gap-20">
+        <div className="flex flex-col gap-20 mt-10 md:mt-20 items-center">
           {portfolioProjects.map((project) => (
             <div
               key={project.title}
@@ -111,10 +111,13 @@ export const ProjectsSection = () => {
 
                 <div>
                   <div className="relative  h-full">
+                    {/* ✨ THE FIX IS HERE ✨ */}
                     <Image
                       src={project.image}
                       alt={project.title}
                       className="mt-8 -mb-8 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
+                      width={1000} /* Add an appropriate width */
+                      height={600} /* Add an appropriate height */
                     />
                   </div>
                 </div>

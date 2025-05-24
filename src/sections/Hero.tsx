@@ -9,7 +9,12 @@ import { HeroOrdit } from '@/components/HeroOrdit';
 
 export const HeroSection = () => {
   return (
-    <div className="py-32 md:py-48 lg:py-60 relative z-0">
+    // 1. Add overflow-x-hidden HERE to the outermost container.
+    // 2. Ensure it's 'relative' so the absolute children position correctly.
+    //    (It already has 'relative' by default if no other position is set,
+    //     but adding it explicitly can be clearer and safer).
+    <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-hidden">
+      {/* This div contains all your decorative, absolutely positioned elements */}
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
         <div
           className="absolute inset-0 -z-30 opacity-5"
@@ -53,6 +58,7 @@ export const HeroSection = () => {
         </HeroOrdit>
       </div>
 
+      {/* This is your main content area, which should not be affected by the overflow fix */}
       <div className="container mx-auto max-w-5xl px-4">
         <div className="flex flex-col items-center">
           <Image src={memojiImage} className="size-[100px]" alt="Person" />
@@ -65,9 +71,6 @@ export const HeroSection = () => {
         </div>
 
         <div className="max-w-lg mx-auto">
-          {/* <h1 className="font-serif text-3xl md:text-5xl text-center font-bold mt-8 tracking-tight">
-            Building Exceptional User Experiences
-          </h1> */}
           <h1 className="font-serif text-4xl md:text-6xl text-center font-bold mt-8 tracking-tight text-white bg-gradient-to-r from-emerald-400 via-green-300 to-emerald-400 bg-clip-text text-transparent drop-shadow-[0_2px_4px_rgba(0,255,128,0.35)]">
             Building Exceptional User Experiences
           </h1>
@@ -97,4 +100,3 @@ export const HeroSection = () => {
   );
 };
 export default HeroSection;
-// Compare this snippet from src/app/page.tsx:

@@ -23,7 +23,7 @@ const merriweather = Merriweather({
 
 export const metadata: Metadata = {
   title: 'Sharzil Nafis',
-  description: 'Created with the help of Frontend Tribe',
+  description: 'Created with the help of NextJS and Tailwind CSS',
 };
 
 export default function RootLayout({

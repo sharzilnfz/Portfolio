@@ -18,7 +18,7 @@ const portfolioProjects = [
       { title: 'Improved site speed by 50%' },
       { title: 'Increased mobile traffic by 35%' },
     ],
-    link: 'https://youtu.be/4k7IdSLxh6w',
+    link: '#',
     image: darkSaasLandingPage,
   },
   {
@@ -30,7 +30,7 @@ const portfolioProjects = [
       { title: 'Expanded customer reach by 35%' },
       { title: 'Increased brand awareness by 15%' },
     ],
-    link: 'https://youtu.be/7hi5zwO75yc',
+    link: '#',
     image: lightSaasLandingPage,
   },
   {
@@ -42,71 +42,104 @@ const portfolioProjects = [
       { title: 'Improved site speed by 50%' },
       { title: 'Increased mobile traffic by 35%' },
     ],
-    link: 'https://youtu.be/Z7I5uSRHMHg',
+    link: '#',
     image: aiStartupLandingPage,
   },
 ];
+interface ProjectsSectionProps {
+  id?: string;
+}
 
-export const ProjectsSection = () => {
+export const ProjectsSection = ({ id }: ProjectsSectionProps) => {
   return (
-    <section className="pb-16 lg:py-24">
-      <div className="container px-4">
+    <section id={id} className="py-16 lg:py-24 xl:py-32">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <SectionHeader
           title="Featured Projects"
           eyebrow="Real-World Results"
           description="See how I transformed concepts into engaging digital experiences"
         />
 
-        <div className="flex flex-col gap-20 mt-10 md:mt-20 items-center">
-          {portfolioProjects.map((project) => (
+        <div className="mt-12 md:mt-16 lg:mt-20 space-y-16 md:space-y-20 lg:space-y-24">
+          {portfolioProjects.map((project, index) => (
             <Card
               key={project.title}
-              className="px-8 pt-8 md:pt-12 md:px-10  lg:pt-16 lg:px-20 pb-0"
+              className="overflow-hidden p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 sticky shadow-lg hover:shadow-xl transition-shadow duration-300"
+              style={{
+                top: `calc(64px + ${index * 60}px)`,
+              }}
             >
-              <div className="lg:grid lg:grid-cols-2 lg:gap-16">
-                <div className="lg:pb-16">
-                  <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
-                    <span>{project.company}</span>
-                    <span>•</span>
-                    <span>{project.year}</span>
+              <div
+                className={`lg:grid lg:grid-cols-2 lg:gap-12 xl:gap-16 lg:items-center ${
+                  index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
+                }`}
+              >
+                <div
+                  className={`space-y-6 md:space-y-8 ${
+                    index % 2 === 1 ? 'lg:col-start-2' : ''
+                  }`}
+                >
+                  <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent">
+                    <span className="text-sm sm:text-base font-bold uppercase tracking-widest">
+                      {project.company}
+                    </span>
+                    <span className="text-sm sm:text-base">•</span>
+                    <span className="text-sm sm:text-base font-bold uppercase tracking-widest">
+                      {project.year}
+                    </span>
                   </div>
 
-                  <h3 className="text-2xl font-serif mt-2 md:mt-5 font-bold tracking-tight md:text-4xl">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold  leading-tight">
                     {project.title}
                   </h3>
-                  <hr className=" border-t-2 border-white/5 mt-4 md:mt-5" />
-                  <ul className=" mt-4 flex flex-col gap-4 md:mt-5">
+
+                  <hr className="border-t-2 border-white/10" />
+
+                  <ul className="space-y-3 md:space-y-4">
                     {project.results.map((result) => (
                       <li
                         key={result.title}
-                        className="text-white/50 flex text-sm md:text-base items-center gap-2"
+                        className="flex items-center gap-3 text-sm sm:text-base md:text-lg text-white/70"
                       >
-                        <CheckIcon className="size-5 md:size-6" />
-                        {result.title}
+                        <CheckIcon className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0" />
+                        <span>{result.title}</span>
                       </li>
                     ))}
                   </ul>
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <button className="bg-white text-gray-950 h-12 px-6 w-full md:w-auto rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
-                      <span>Visit Live Site</span>
-                      <ArrowIcon className="size-4" style={{}} />
-                    </button>
-                  </a>
+
+                  <div className="pt-4">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block"
+                    >
+                      <button className="bg-white text-gray-950 h-12 sm:h-14 px-6 sm:px-8 rounded-xl font-semibold inline-flex items-center justify-center gap-2 hover:bg-gray-100 transition-colors duration-200 min-w-[200px]">
+                        <span className="text-sm sm:text-base">
+                          Visit Live Site
+                        </span>
+                        <ArrowIcon
+                          className="w-4 h-4 sm:w-5 sm:h-5"
+                          style={undefined}
+                        />
+                      </button>
+                    </a>
+                  </div>
                 </div>
 
-                <div>
-                  <div className="relative  h-full">
-                    {/* ✨ THE FIX IS HERE ✨ */}
+                <div
+                  className={`mt-8 lg:mt-0 ${
+                    index % 2 === 1 ? 'lg:col-start-1' : ''
+                  }`}
+                >
+                  <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800 shadow-2xl">
                     <Image
                       src={project.image}
                       alt={project.title}
-                      className="mt-8 -mb-8 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
-                      width={1000} /* Add an appropriate width */
-                      height={600} /* Add an appropriate height */
+                      className="w-full h-auto object-cover"
+                      width={800}
+                      height={600}
+                      priority={index === 0}
                     />
                   </div>
                 </div>

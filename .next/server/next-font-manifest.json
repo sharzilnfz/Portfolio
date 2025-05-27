@@ -1,11 +1,1 @@
-{
-  "app": {
-    "[project]/src/app/page": [
-      "static/media/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw-s.p.7b3669ea.woff2",
-      "static/media/6NUU8F2OJg6MeR7l4e0fs8wB49dJfg-s.p.4a548468.woff2"
-    ]
-  },
-  "appUsingSizeAdjust": true,
-  "pages": {},
-  "pagesUsingSizeAdjust": false
-}
+{"pages":{},"app":{"/Users/sharzilnafis/Desktop/Project/DevPortfolio/src/app/layout":["static/media/56515b6b3a8d18de-s.p.woff2","static/media/a34f9d1faa5f3315-s.p.woff2","static/media/ebf02fc3e7dd10ae-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}

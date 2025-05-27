@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Calistoga } from 'next/font/google';
+import { Inter, Calistoga, Merriweather } from 'next/font/google';
 import { twMerge } from 'tailwind-merge';
 
 import './globals.css';
@@ -15,8 +15,14 @@ const calistoga = Calistoga({
   weight: '400',
 });
 
+const merriweather = Merriweather({
+  subsets: ['latin'],
+  variable: '--font-merriweather',
+  weight: '400',
+});
+
 export const metadata: Metadata = {
-  title: 'My Portfolio',
+  title: 'Sharzil Nafis',
   description: 'Created with the help of Frontend Tribe',
 };
 
@@ -31,6 +37,7 @@ export default function RootLayout({
         className={twMerge(
           inter.variable,
           calistoga.variable,
+          merriweather.variable,
           'bg-gray-900 text-white antialiased font-sans '
         )}
       >

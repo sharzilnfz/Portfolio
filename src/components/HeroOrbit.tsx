@@ -3,21 +3,24 @@ import { PropsWithChildren } from 'react';
 interface HeroOrbitProps {
   size: number;
   rotation: number;
-  spinDuration?: string;
+  orbitDuration?: string; // Speed of orbital movement around center
+  spinDuration?: string; // Speed of self-rotation on own axis
 }
 
 export const HeroOrbit = ({
   children,
   size,
   rotation,
-  spinDuration = '20s',
+  orbitDuration = '20s',
+  spinDuration = '10s',
 }: PropsWithChildren<HeroOrbitProps>) => {
   return (
     <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-20">
+      {/* Orbital rotation around center */}
       <div
         className="animate-spin"
         style={{
-          animationDuration: spinDuration,
+          animationDuration: orbitDuration,
           animationTimingFunction: 'linear',
           animationIterationCount: 'infinite',
         }}
@@ -30,11 +33,11 @@ export const HeroOrbit = ({
             width: `${size}px`,
           }}
         >
+          {/* Self-rotation on own axis */}
           <div
             className="animate-spin"
             style={{
               animationDuration: spinDuration,
-              animationDirection: 'reverse',
               animationTimingFunction: 'linear',
               animationIterationCount: 'infinite',
             }}

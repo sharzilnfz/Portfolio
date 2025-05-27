@@ -1,3 +1,6 @@
+import { AboutSection } from '@/sections/About';
+import { ContactSection } from '@/sections/Contact';
+import { Footer } from '@/sections/Footer';
 import { Header } from '@/sections/Header';
 import { HeroSection } from '@/sections/Hero';
 import { ProjectsSection } from '@/sections/Projects';
@@ -8,10 +11,13 @@ export default function Home() {
   return (
     <>
       <Header />
-      <HeroSection />
-      <ProjectsSection />
+      <HeroSection id="home" />
+      <ProjectsSection id="projects" />
       <TapeSection />
       <TestimonialsSection />
+      <AboutSection id="about" />
+      <ContactSection />
+      <Footer />
     </>
   );
 }

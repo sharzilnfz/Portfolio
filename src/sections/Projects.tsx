@@ -2,48 +2,51 @@ import Image from 'next/image';
 import darkSaasLandingPage from '@/assets/images/dark-saas-landing-page.png';
 import lightSaasLandingPage from '@/assets/images/light-saas-landing-page.png';
 import aiStartupLandingPage from '@/assets/images/ai-startup-landing-page.png';
+import xora from '@/assets/images/xora.png';
+import movieSearch from '@/assets/images/movieSearch.png';
+import promptEng from '@/assets/images/promptEng.png';
 import CheckIcon from '@/assets/icons/CheckIcon.jsx';
 import ArrowIcon from '@/assets/icons/ArrowIcon.jsx';
-import grainImage from '@/assets/images/grain.jpg';
+
 import { SectionHeader } from '@/components/SectionHeader';
 import { Card } from '@/components/card';
 
 const portfolioProjects = [
   {
-    company: 'Acme Corp',
-    year: '2022',
-    title: 'Dark Saas Landing Page',
+    company: 'FUll Stack',
+    year: '2025',
+    title: 'MovieSearch',
     results: [
-      { title: 'Enhanced user experience by 40%' },
-      { title: 'Improved site speed by 50%' },
-      { title: 'Increased mobile traffic by 35%' },
+      { title: 'React.Js' },
+      { title: 'Tailwind CSS' },
+      { title: 'Appwrite & TMDB API' },
     ],
-    link: '#',
-    image: darkSaasLandingPage,
+    link: 'https://moviesearch-sharzil.netlify.app/',
+    image: movieSearch,
   },
   {
-    company: 'Innovative Co',
-    year: '2021',
-    title: 'Light Saas Landing Page',
+    company: 'Frontend',
+    year: '2025',
+    title: 'Prompt Enginnering Guide',
     results: [
-      { title: 'Boosted sales by 20%' },
-      { title: 'Expanded customer reach by 35%' },
-      { title: 'Increased brand awareness by 15%' },
+      { title: 'NextJs & TypeScipt' },
+      { title: 'Tailwind CSS' },
+      { title: 'Shadcn, Framer Motion, Lucide React & Zod ' },
     ],
-    link: '#',
-    image: lightSaasLandingPage,
+    link: 'https://promptengineeringfordevs.netlify.app/',
+    image: promptEng,
   },
   {
-    company: 'Quantum Dynamics',
-    year: '2023',
-    title: 'AI Startup Landing Page',
+    company: 'Frontend',
+    year: '2025',
+    title: 'Xora - AI SaaS Landing Page',
     results: [
-      { title: 'Enhanced user experience by 40%' },
-      { title: 'Improved site speed by 50%' },
-      { title: 'Increased mobile traffic by 35%' },
+      { title: 'ReactJs' },
+      { title: 'Tailwind CSS' },
+      { title: 'Lucide React & Zod' },
     ],
-    link: '#',
-    image: aiStartupLandingPage,
+    link: 'https://xora-ai-saas.netlify.app',
+    image: xora,
   },
 ];
 interface ProjectsSectionProps {
@@ -61,24 +64,13 @@ export const ProjectsSection = ({ id }: ProjectsSectionProps) => {
         />
 
         <div className="mt-12 md:mt-16 lg:mt-20 space-y-16 md:space-y-20 lg:space-y-24">
-          {portfolioProjects.map((project, index) => (
+          {portfolioProjects.map((project) => (
             <Card
               key={project.title}
               className="overflow-hidden p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 sticky shadow-lg hover:shadow-xl transition-shadow duration-300"
-              style={{
-                top: `calc(64px + ${index * 60}px)`,
-              }}
             >
-              <div
-                className={`lg:grid lg:grid-cols-2 lg:gap-12 xl:gap-16 lg:items-center ${
-                  index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-                }`}
-              >
-                <div
-                  className={`space-y-6 md:space-y-8 ${
-                    index % 2 === 1 ? 'lg:col-start-2' : ''
-                  }`}
-                >
+              <div className="lg:grid lg:grid-cols-3 lg:gap-4 lg:items-center">
+                <div className="space-y-6 md:space-y-8   lg:grid-cols-3">
                   <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent">
                     <span className="text-sm sm:text-base font-bold uppercase tracking-widest">
                       {project.company}
@@ -89,23 +81,23 @@ export const ProjectsSection = ({ id }: ProjectsSectionProps) => {
                     </span>
                   </div>
 
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold  leading-tight">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-serif font-bold  leading-tight w-full">
                     {project.title}
                   </h3>
 
                   <hr className="border-t-2 border-white/10" />
 
-                  <ul className="space-y-3 md:space-y-4">
+                  <div className="space-y-3 md:space-y-4 w-full">
                     {project.results.map((result) => (
                       <li
                         key={result.title}
-                        className="flex items-center gap-3 text-sm sm:text-base md:text-lg text-white/70"
+                        className="flex items-center gap-3 text-sm sm:text-base md:text-lg text-white/70 w-full"
                       >
                         <CheckIcon className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0" />
                         <span>{result.title}</span>
                       </li>
                     ))}
-                  </ul>
+                  </div>
 
                   <div className="pt-4">
                     <a
@@ -127,21 +119,12 @@ export const ProjectsSection = ({ id }: ProjectsSectionProps) => {
                   </div>
                 </div>
 
-                <div
-                  className={`mt-8 lg:mt-0 ${
-                    index % 2 === 1 ? 'lg:col-start-1' : ''
-                  }`}
-                >
-                  <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800 shadow-2xl">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-auto object-cover"
-                      width={800}
-                      height={600}
-                      priority={index === 0}
-                    />
-                  </div>
+                <div className="relative lg:w-2/3">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:h-auto lg:w-[800px] lg:max-w-none rounded-3xl"
+                  />
                 </div>
               </div>
             </Card>

@@ -125,7 +125,7 @@ export const HeroSection = ({ id }: HeroSectionProps) => {
         </div>
 
         <div className="max-w-lg mx-auto">
-          <h1 className="font-serif text-4xl md:text-6xl text-center font-bold mt-8 text-white bg-gradient-to-r from-emerald-400 via-green-300 to-emerald-400 bg-clip-text text-transparent drop-shadow-[0_2px_4px_rgba(0,255,128,0.35)]">
+          <h1 className="font-serif text-4xl md:text-6xl text-center font-bold mt-8">
             Building Exceptional User Experiences
           </h1>
           <p className="text-center text-white/60 mt-4 md:text-lg">

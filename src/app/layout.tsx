@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Calistoga, Merriweather } from 'next/font/google';
+import { Inter, Calistoga, Space_Grotesk } from 'next/font/google';
 import { twMerge } from 'tailwind-merge';
 
 import './globals.css';
@@ -15,15 +15,15 @@ const calistoga = Calistoga({
   weight: '400',
 });
 
-const merriweather = Merriweather({
+const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
-  variable: '--font-merriweather',
-  weight: '400',
+  variable: '--font-space-grotesk',
+  weight: '600',
 });
 
 export const metadata: Metadata = {
   title: 'Sharzil Nafis',
-  description: 'Created with the help of NextJS and Tailwind CSS',
+  description: 'Unleashing Creative Code',
 };
 
 export default function RootLayout({
@@ -37,7 +37,7 @@ export default function RootLayout({
         className={twMerge(
           inter.variable,
           calistoga.variable,
-          merriweather.variable,
+          spaceGrotesk.variable,
           'bg-gray-900 text-white antialiased font-sans '
         )}
       >

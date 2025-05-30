@@ -67,7 +67,7 @@ export const ProjectsSection = ({ id }: ProjectsSectionProps) => {
           {portfolioProjects.map((project) => (
             <Card
               key={project.title}
-              className="overflow-hidden p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 sticky top-16 shadow-lg hover:shadow-xl transition-shadow duration-300 pointer-events-none"
+              className="overflow-hidden p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 sticky top-16 shadow-lg hover:shadow-xl transition-shadow duration-300"
               style={{
                 top: `calc(64px + ${
                   portfolioProjects.indexOf(project) * 40

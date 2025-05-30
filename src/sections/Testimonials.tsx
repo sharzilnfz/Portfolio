@@ -5,7 +5,7 @@ import memojiAvatar4 from '@/assets/images/memoji-avatar-4.png';
 import memojiAvatar5 from '@/assets/images/memoji-avatar-5.png';
 // Make sure to import SectionHeader from its correct path
 import { SectionHeader } from '@/components/SectionHeader';
-import { Card } from '@/components/card';
+import Card from '@/components/card';
 import { Fragment } from 'react';
 
 const testimonials = [

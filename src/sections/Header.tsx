@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export const Header = () => {
   return (
-    <div className="flex justify-center items-center fixed top-3 w-full z-10">
+    <div className="flex justify-center items-center fixed top-3 md:top-5 w-full z-10">
       <nav className="flex gap-1 p-0.5 border-white/15 rounded-full bg-gray-800 bg-white/10 backdrop-blur transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
         <Link href="#home" className="nav-item">
           Home

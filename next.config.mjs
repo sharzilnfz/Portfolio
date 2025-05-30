@@ -1,5 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Remove any basePath and assetPrefix for custom domain
+  basePath: '',
+  assetPrefix: '',
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
+  output: 'export',
   webpack(config) {
     const fileLoaderRule = config.module.rules.find((rule) =>
       rule.test?.test?.('.svg')

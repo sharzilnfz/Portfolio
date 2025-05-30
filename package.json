@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build-css": "npx tailwindcss-cli@latest build -i ./src/styles.css -o ./public/styles.css"
+    "build-css": "npx tailwindcss-cli@latest build -i ./src/styles.css -o ./public/styles.css",
+    "export": "next build && next export",
+    "deploy": "npm run build && touch out/.nojekyll"
   },
   "dependencies": {
     "@eslint/config-array": "^0.20.0",

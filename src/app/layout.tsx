@@ -1,8 +1,21 @@
 import type { Metadata } from 'next';
 import { Inter, Calistoga, Space_Grotesk } from 'next/font/google';
 import { twMerge } from 'tailwind-merge';
-
+import localFont from 'next/font/local';
 import './globals.css';
+import { MouseAnimationProvider } from '@/contexts/MouseAnimationContext';
+
+const auge = localFont({
+  src: '../fonts/augeF/Auge-Trial-ExtraBold.otf',
+  variable: '--font-auge',
+  display: 'swap',
+});
+
+const sagfield = localFont({
+  src: '../fonts/sagfield/sagfield-wpk7y.otf',
+  variable: '--font-sagfield',
+  display: 'swap',
+});
 
 const inter = Inter({
   subsets: ['latin'],
@@ -35,13 +48,15 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={twMerge(
+          sagfield.variable,
+          auge.variable,
           inter.variable,
           calistoga.variable,
           spaceGrotesk.variable,
-          'bg-gray-900 text-white antialiased font-sans '
+          'bg-gray-900 text-white antialiased font-space-grotesk'
         )}
       >
-        {children}
+        <MouseAnimationProvider>{children}</MouseAnimationProvider>
       </body>
     </html>
   );

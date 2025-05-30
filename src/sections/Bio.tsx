@@ -7,8 +7,15 @@ import grainImage from '@/assets/images/grain.jpg';
 const Bio = () => {
   return (
     <>
-      <section className="flex items-center justify-center px-10 md:px-20">
-        <div className="bg-gradient-to-r from-emerald-300 to-sky-400 rounded-3xl py-4 px-5  text-center relative overflow-hidden">
+      {/* <h2
+        className="font-auge text-3xl text-center mt-6 font-bold tracking-tight md:text-5xl"
+        // style={{ fontFamily: "'Auge', serif" }}
+      >
+        About Me
+      </h2> */}
+
+      <section className="flex container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl items-center justify-center">
+        <div className="bg-gradient-to-r from-emerald-300 to-sky-400 rounded-3xl py-4 md:px-8 px-4 text-center relative overflow-hidden max-w-3xl">
           {/* Grain texture background */}
           <div
             className="absolute inset-0 opacity-5"
@@ -21,7 +28,8 @@ const Bio = () => {
       About Me
     </h2> */}
             <p className=" text-black mb-4 text-sm md:text-base mt-4">
-              Currently I'm totally into web development with{' '}
+              I am <span className="font-extrabold">Sharzil</span> 👋, Currently
+              I'm a Web Developer working with{' '}
               <span className="font-extrabold">React</span>,{' '}
               <span className="font-extrabold">Tailwind</span>,{' '}
               <span className="font-extrabold">Next.js</span>, and{' '}
@@ -45,8 +53,8 @@ const Bio = () => {
             <p className=" text-black mb-4 text-sm md:text-base">
               Switching from design to coding wasn't too crazy since both need
               problem-solving skills. My design background actually helps me
-              build better interfaces and understand what clients want. Now I
-              mix visual stuff with coding to create complete web projects.
+              build better interfaces and understand what people like. Now I mix
+              visual stuff with coding to create complete web projects.
             </p>
           </div>
         </div>

@@ -86,7 +86,7 @@ export const ProjectsSection = ({ id }: ProjectsSectionProps) => {
                     </span>
                   </div>
 
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-serif font-bold  leading-tight w-full">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-auge font-bold  leading-tight w-full">
                     {project.title}
                   </h3>
 

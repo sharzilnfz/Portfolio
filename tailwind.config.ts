@@ -11,6 +11,9 @@ const config: Config = {
         sans: ['var(--font-sans)'],
         serif: ['var(--font-serif)'],
         merriweather: ['var(--font-merriweather)'],
+        auge: ['var(--font-auge)'],
+        'space-grotesk': ['var(--font-space-grotesk)'],
+        sagfield: ['var(--font-sagfield)'],
       },
       animation: {
         'ping-large': 'ping-large 1s ease-in-out infinite',

@@ -1,6 +1,5 @@
 import grainImage from '@/assets/images/grain.jpg';
-import { forwardRef } from 'react';
-import { ComponentPropsWithoutRef } from 'react';
+import { ComponentPropsWithoutRef, forwardRef } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 export const Card = forwardRef<HTMLDivElement, ComponentPropsWithoutRef<'div'>>(
@@ -15,9 +14,10 @@ export const Card = forwardRef<HTMLDivElement, ComponentPropsWithoutRef<'div'>>(
             'transition-all duration-200 ease-out ' +
             'will-change-transform transform-gpu ' +
             // Perfect hover state
-            'hover:scale-[1.025] hover:shadow-2xl hover:shadow-black/40 ' +
-            'hover:brightness-105 ' +
+            // 'hover:scale-[1.025] hover:shadow-2xl hover:shadow-black/40 ' +
+            // 'hover:brightness-105 ' +
             // Active feedback
+
             'active:scale-[0.98] active:duration-200',
           className
         )}

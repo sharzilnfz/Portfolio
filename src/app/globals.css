@@ -45,3 +45,14 @@
     z-index: 9999;
   }
 }
+
+/* Hide scrollbar while keeping scroll functionality */
+.no-scrollbar {
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Chrome, Safari, and newer Edge */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

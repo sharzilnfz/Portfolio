@@ -1,5 +1,3 @@
-import { q } from 'framer-motion/client';
-
 export const SectionHeader = ({
   title,
   eyebrow,

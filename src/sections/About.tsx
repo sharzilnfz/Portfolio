@@ -1,19 +1,19 @@
 'use client';
-import { Card } from '@/components/card';
-import { SectionHeader } from '@/components/SectionHeader';
-import bookImage from '@/assets/images/book-cover.png';
-import Image from 'next/image';
-import JavascriptIcon from '@/assets/icons/square-js.svg';
-import HTMLIcon from '@/assets/icons/html5.svg';
-import CssIcon from '@/assets/icons/css3.svg';
-import ReactIcon from '@/assets/icons/react.svg';
 import ChromeIcon from '@/assets/icons/chrome.svg';
+import CssIcon from '@/assets/icons/css3.svg';
 import GithubIcon from '@/assets/icons/github.svg';
+import HTMLIcon from '@/assets/icons/html5.svg';
+import ReactIcon from '@/assets/icons/react.svg';
+import JavascriptIcon from '@/assets/icons/square-js.svg';
+import bookImage from '@/assets/images/book-cover.png';
 import mapImage from '@/assets/images/map.png';
-import smileMemoji from '@/assets/images/memoji-smile.png';
+import smile from '@/assets/images/smile.png';
+import { Card } from '@/components/card';
 import { CardHeader } from '@/components/cardHeader';
+import { SectionHeader } from '@/components/SectionHeader';
 import { ToolBoxItems } from '@/components/ToolBoxItems';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { useRef } from 'react';
 
 const hobbies = [
@@ -155,7 +155,7 @@ export const AboutSection = ({ id }: AboutSectionProps) => {
                   <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-10"></div>
                   {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full  bg-gradient-to-r from-emerald-300 to-sky-400 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30 -z-10"> */}
                   <Image
-                    src={smileMemoji}
+                    src={smile}
                     className="size-20"
                     alt="Map of my journey"
                   />

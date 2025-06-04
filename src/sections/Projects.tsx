@@ -143,7 +143,7 @@ const portfolioProjects = [
     results: [
       { title: 'ReactJs' },
       { title: 'Tailwind CSS' },
-      { title: 'Lucide React & Zod' },
+      { title: 'Lucide React, ShadCn' },
     ],
     link: 'https://xora-ai-saas.netlify.app',
     image: xora,
@@ -364,14 +364,14 @@ export const ProjectsSection = ({ id }: ProjectsSectionProps) => {
           description="See how I transformed concepts into engaging digital experiences"
         />
 
-        <div className="mt-12 md:mt-16 lg:mt-20 space-y-16 md:space-y-20 lg:space-y-24">
+        <div className="mt-12 md:mt-16 lg:mt-20 space-y-20 md:space-y-20 lg:space-y-24">
           {portfolioProjects.map((project) => (
             <Card
               key={project.title}
               className="overflow-hidden p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 sticky top-16 shadow-lg hover:shadow-xl transition-shadow duration-300 "
               style={{
                 top: `calc(64px + ${
-                  portfolioProjects.indexOf(project) * 40
+                  portfolioProjects.indexOf(project) * 18
                 }px)`,
               }}
             >

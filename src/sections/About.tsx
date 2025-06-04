@@ -68,7 +68,7 @@ export const AboutSection = ({ id }: AboutSectionProps) => {
           title={'A Glimpse Into My World'}
           eyebrow={'About Me'}
           description={
-            'Learn more about who I am, What I do, and what Inspires me.'
+            'Learn more about who I am, What I do, and What Inspires me.'
           }
         />
 
@@ -93,7 +93,7 @@ export const AboutSection = ({ id }: AboutSectionProps) => {
             <Card className="h-[320px] md:col-span-3 lg:col-span-2">
               <CardHeader
                 title="My Toolbox"
-                description="Explore the  ools and technologies i use to craft exceptional
+                description="Explore the  tools and technologies I use to craft exceptional
               digital experiences."
               />
 
@@ -113,7 +113,7 @@ export const AboutSection = ({ id }: AboutSectionProps) => {
             <Card className="h-[320px] flex flex-col md:col-span-3 lg:col-span-2">
               <CardHeader
                 title="Becond the code"
-                description="Explore My interests, hobbies beyond the digial realm"
+                description="Explore my interests, hobbies beyond the digital realm"
                 className="px-6 py-6"
               />
               <div className="relative flex-1" ref={constraintsRef}>

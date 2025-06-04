@@ -1,11 +1,10 @@
-import memojiImage from '@/assets/images/memoji-computer-s.png';
-import Image from 'next/image';
 import ArrowDown from '@/assets/icons/arrow-down.svg';
-import grainImage from '@/assets/images/grain.jpg';
-import StarSvg from '@/assets/icons/star.jsx';
 import Sparkle from '@/assets/icons/Sparkle.jsx';
+import StarSvg from '@/assets/icons/star.jsx';
+import grainImage from '@/assets/images/grain.jpg';
+import memojiImage from '@/assets/images/memoji-computer-s.png';
 import { HeroOrbit } from '@/components/HeroOrbit';
-import ArrowIcon from '@/assets/icons/ArrowIcon';
+import Image from 'next/image';
 
 // Define the props interface
 interface HeroSectionProps {
@@ -149,7 +148,7 @@ export const HeroSection = ({ id }: HeroSectionProps) => {
               ✌️
             </span>
             <a
-              href="https://w.app/nafisx"
+              href="https://wa.me/8801540404303"
               target="_blank"
               rel="noopener noreferrer"
             >

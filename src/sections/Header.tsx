@@ -14,7 +14,9 @@ export const Header = () => {
           Projects
         </Link>
         <a
-          href="https://w.app/nafisx"
+          href="https://wa.me/8801540404303"
+          target="_blank"
+          rel="noopener noreferrer"
           className="nav-item bg-white text-black hover:bg-white/70 hover:text-gray-900 transition-colors duration-200 ease-in-out"
         >
           Contact

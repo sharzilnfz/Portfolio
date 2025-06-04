@@ -1,6 +1,5 @@
-import React from 'react';
-import { ArrowUpRight } from 'lucide-react';
 import grainImage from '@/assets/images/grain.jpg';
+import { ArrowUpRight } from 'lucide-react';
 
 export const ContactSection = () => {
   return (
@@ -37,7 +36,7 @@ export const ContactSection = () => {
             {/* Contact Button */}
             <div className="lg:flex-shrink-0 ">
               <a
-                href="https://w.app/nafisx"
+                href="https://wa.me/8801540404303"
                 target="_blank"
                 rel="noopener noreferrer"
               >

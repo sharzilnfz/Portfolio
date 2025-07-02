@@ -55,7 +55,7 @@ const portfolioProjects = [
       { title: 'Supabase' },
       { title: 'Clerk, Vapi' },
     ],
-    link: 'https://converso-rust.vercel.app/companions',
+    link: 'https://converso-git-main-sharzil-nafis-projects.vercel.app/',
     image: converso, // Replace with actual image import
     description:
       'An LMS SaaS app built from scratch using Next.js, Supabase, and Stripe, featuring user authentication, subscriptions, and payments. It integrates real-time teaching with Vapi’s AI vocal agents for interactive learning sessions, delivering a seamless educational platform.',

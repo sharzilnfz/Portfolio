@@ -1,8 +1,8 @@
 import ArrowDown from '@/assets/icons/arrow-down.svg';
 import Sparkle from '@/assets/icons/Sparkle.jsx';
 import StarSvg from '@/assets/icons/star.jsx';
-import grainImage from '@/assets/images/grain.jpg';
-import memojiImage from '@/assets/images/memoji-computer-s.png';
+import grainImage from '@/assets/images/grain.avif';
+import memojiImage from '@/assets/images/memoji-computer-s.avif';
 import { HeroOrbit } from '@/components/HeroOrbit';
 import Image from 'next/image';
 
@@ -111,7 +111,14 @@ export const HeroSection = ({ id }: HeroSectionProps) => {
 
       <div className="container mx-auto max-w-5xl px-4">
         <div className="flex flex-col items-center">
-          <Image src={memojiImage} className="size-[100px]" alt="Person" />
+          <Image
+            src={memojiImage}
+            alt="Person"
+            width={100}
+            height={100}
+            loading="lazy"
+            className="size-[100px]"
+          />{' '}
           <div className="bg-gray-950 border-gray-800 border-2 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg shadow-md">
             <div className="relative flex items-center justify-center size-2.5">
               <div className="bg-green-500 absolute inset-0 rounded-full animate-ping-large"></div>

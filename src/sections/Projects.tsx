@@ -2,11 +2,11 @@
 import ArrowIcon from '@/assets/icons/ArrowIcon.jsx';
 
 import CheckIcon from '@/assets/icons/CheckIcon.jsx';
-import converso from '@/assets/images/converso.png';
-import movieSearch from '@/assets/images/movieSearch.png';
-import promptEng from '@/assets/images/promptEng.png';
-import subscriptionTrackerImage from '@/assets/images/subscriptionTrackerImage.png';
-import xora from '@/assets/images/xora.png';
+import converso from '@/assets/images/converso.avif';
+import movieSearch from '@/assets/images/movieSearch.avif';
+import promptEng from '@/assets/images/promptEng.avif';
+import subscriptionTrackerImage from '@/assets/images/subscriptionTrackerImage.avif';
+import xora from '@/assets/images/xora.avif';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
@@ -393,7 +393,7 @@ export const ProjectsSection = ({ id }: ProjectsSectionProps) => {
 
                   <hr className="border-t-2 border-white/10" />
 
-                  <div className="space-y-3 md:space-y-4 w-full">
+                  <ul className="space-y-3 md:space-y-4 w-full">
                     {project.results.map((result) => (
                       <li
                         key={result.title}
@@ -403,7 +403,7 @@ export const ProjectsSection = ({ id }: ProjectsSectionProps) => {
                         <span>{result.title}</span>
                       </li>
                     ))}
-                  </div>
+                  </ul>
 
                   <div className="pt-4 flex flex-col sm:flex-row lg:flex-col gap-3">
                     <button

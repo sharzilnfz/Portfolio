@@ -1,8 +1,4 @@
-import { Card } from '@/components/card';
-import React from 'react';
-import { SectionHeader } from '@/components/SectionHeader';
-
-import grainImage from '@/assets/images/grain.jpg';
+import grainImage from '@/assets/images/grain.avif';
 
 const Bio = () => {
   return (
